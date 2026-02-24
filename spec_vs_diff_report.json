@@ -1,61 +1,14 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-24T20:41:57.252Z",
-  "summary": "The diff implements the vast majority of requirements well. All major sections (Hero, About, Services, Courses, Contact, WhatsApp button, Header, Footer) are present. SEO meta tags, backend storage for contact/newsletter, and external links with proper targets are implemented. One notable gap is that the generated image assets are referenced in code but there is no evidence they were actually generated or placed in frontend/public/assets/generated.",
-  "missing_requirements": [
-    {
-      "id": "REQ-8",
-      "requirement": "Generate hero background image and decorative mandala pattern tile; serve from frontend/public/assets/generated",
-      "reason": "The code references '/assets/generated/hero-bg.dim_1920x1080.png' and '/assets/generated/mandala-pattern.dim_600x600.png', but no image files appear in the diff as added files. The diff shows 21 added files listing only code/config files with no confirmation the actual PNG assets were generated or placed in frontend/public/assets/generated.",
-      "evidence": [
-        "frontend/src/components/Hero.tsx",
-        "frontend/src/components/About.tsx",
-        "frontend/src/components/Courses.tsx"
-      ]
-    }
-  ],
-  "hallucinated_features": [
-    {
-      "description": "Internet Identity (ICP authentication) integration via InternetIdentityProvider wrapping the entire app",
-      "reason": "The build request explicitly listed 'User authentication or login system' as a non-goal and did not request any Internet Identity or authentication features. The diff includes a full InternetIdentityProvider and useInternetIdentity hook wrapping the app.",
-      "evidence": [
-        "frontend/src/main.tsx",
-        "frontend/src/hooks/useInternetIdentity.ts",
-        "frontend/src/hooks/useActor.ts"
-      ]
-    },
-    {
-      "description": "caffeine.ai attribution with UTM tracking in the Footer",
-      "reason": "The build request did not request any third-party attribution or UTM tracking links in the footer. The frontend-file-summaries.txt explicitly mentions caffeine.ai attribution with UTM tracking in the Footer component.",
-      "evidence": [
-        "frontend/src/components/Footer.tsx",
-        "frontend-file-summaries.txt"
-      ]
-    }
-  ],
-  "confidence": 0.82,
+  "generatedAt": "2026-02-24T22:00:41.331Z",
+  "summary": "All three required enrollment link updates are implemented in the diff. The PANCHANG & REMEDIES COURSE, ADVANCED PREDICTIVE ASTROLOGY, and PREDICTIVE PRASHNA COURSE all show the new Google Form URLs as specified in REQ-15, REQ-16, and REQ-17. The NAKSHATRA MASTER COURSE link remains unchanged. No hallucinated features were detected.",
+  "missing_requirements": [],
+  "hallucinated_features": [],
+  "confidence": 0.97,
   "changed_files": [
-    "all_files_summary.json",
-    "backend/main.mo",
     "frontend-file-summaries.txt",
-    "frontend/index.css",
-    "frontend/index.html",
-    "frontend/src/App.tsx",
-    "frontend/src/components/About.tsx",
-    "frontend/src/components/Contact.tsx",
     "frontend/src/components/Courses.tsx",
-    "frontend/src/components/Footer.tsx",
-    "frontend/src/components/Header.tsx",
-    "frontend/src/components/Hero.tsx",
-    "frontend/src/components/Services.tsx",
-    "frontend/src/components/WhatsAppButton.tsx",
-    "frontend/src/hooks/useActor.ts",
-    "frontend/src/hooks/useInternetIdentity.ts",
-    "frontend/src/hooks/useQueries.ts",
-    "frontend/src/index.css",
-    "frontend/src/main.tsx",
-    "frontend/tailwind.config.js",
     "project_state.json"
   ]
 }

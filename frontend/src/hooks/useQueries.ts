@@ -1,5 +1,7 @@
-import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { useActor } from './useActor';
+import type { ContactEntry } from '../backend';
+import type { Principal } from '@dfinity/principal';
 
 export function useSubmitContact() {
     const { actor } = useActor();
@@ -38,5 +40,33 @@ export function useSubscribeNewsletter() {
         onSuccess: () => {
             queryClient.invalidateQueries({ queryKey: ['newsletter'] });
         },
+    });
+}
+
+export function useGetContactSubmissions() {
+    const { actor, isFetching } = useActor();
+
+    return useQuery<Array<[Principal, Array<ContactEntry>]>>({
+        queryKey: ['adminContactSubmissions'],
+        queryFn: async () => {
+            if (!actor) return [];
+            return actor.adminGetAllContacts();
+        },
+        enabled: !!actor && !isFetching,
+        retry: false,
+    });
+}
+
+export function useGetNewsletterSubscribers() {
+    const { actor, isFetching } = useActor();
+
+    return useQuery<Array<string>>({
+        queryKey: ['adminNewsletterSubscribers'],
+        queryFn: async () => {
+            if (!actor) return [];
+            return actor.adminGetAllNewsletterEmails();
+        },
+        enabled: !!actor && !isFetching,
+        retry: false,
     });
 }

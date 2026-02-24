@@ -1,12 +1,19 @@
 import Set "mo:core/Set";
 import Text "mo:core/Text";
-import Array "mo:core/Array";
 import Map "mo:core/Map";
+import Array "mo:core/Array";
+import Order "mo:core/Order";
 import Iter "mo:core/Iter";
 import Principal "mo:core/Principal";
-import Order "mo:core/Order";
+import Runtime "mo:core/Runtime";
+import MixinAuthorization "authorization/MixinAuthorization";
+import AccessControl "authorization/access-control";
 
 actor {
+  // Mixin authorization component, first line in actor
+  let accessControlState = AccessControl.initState();
+  include MixinAuthorization(accessControlState);
+
   type ContactEntry = {
     name : Text;
     email : Text;
@@ -70,8 +77,23 @@ actor {
     };
   };
 
-  // Query all newsletter emails
-  public query ({ caller }) func getAllNewsletterEmails() : async [Text] {
+  // Admin only: Query all contacts
+  public query ({ caller }) func adminGetAllContacts() : async [(Principal, [ContactEntry])] {
+    if (not (AccessControl.hasPermission(accessControlState, caller, #admin))) {
+      Runtime.trap("Unauthorized: Only admin can get all contacts");
+    };
+    contacts.toArray().map(
+      func((principal, entries)) {
+        (principal, entries.toArray().sort());
+      }
+    );
+  };
+
+  // Admin only: Query all newsletter emails
+  public query ({ caller }) func adminGetAllNewsletterEmails() : async [Text] {
+    if (not (AccessControl.hasPermission(accessControlState, caller, #admin))) {
+      Runtime.trap("Unauthorized: Only admin can get all newsletter emails");
+    };
     newsletterEmails.toArray();
   };
 };

@@ -24,7 +24,7 @@ const courses = [
         savings: 'Save ₹9,000',
         badge: 'Best Value',
         icon: '🪐',
-        formUrl: 'https://docs.google.com/forms/d/1XzTVhuKroKZVpuaY2f3PgUglh0AQXc65fYPqyWGE1qA/edit',
+        formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdQTUJfhdVQzn60UcLdNL4mBcle2D67_ypmkx_zpFESd_mSoQ/viewform?usp=header',
         features: ['Vimshottari Dasha', 'Ashtakavarga System', 'Transit Predictions', 'Case Studies'],
     },
     {
@@ -38,7 +38,7 @@ const courses = [
         savings: 'Save ₹3,500',
         badge: 'Specialized',
         icon: '❓',
-        formUrl: 'https://docs.google.com/forms/d/1ZsZzuWn83u5qYHtPx7yvW5epRyt90ZXwJ_5rL4w-BLs/edit',
+        formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSe3SLqEK7S213E4Lk9cAfT7OsRVH2ZJx_fyP9x9m0SyC9hV6w/viewform?usp=header',
         features: ['Prashna Fundamentals', 'Question Analysis', 'Timing Techniques', 'Practice Charts'],
     },
     {
@@ -52,7 +52,7 @@ const courses = [
         savings: 'Save ₹4,000',
         badge: 'Practical',
         icon: '🔱',
-        formUrl: 'https://docs.google.com/forms/d/1td88CZwfBFd8-3hv2TwNwJDCc_gC5ewviJ2HKOMjbgI/edit',
+        formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfYBQDmcnAag5e_Hj22ACr9mIsYnioe9DuAkBdGDotXLZC1Ow/viewform',
         features: ['Panchang Mastery', 'Muhurta Selection', 'Vedic Remedies', 'Gemstone Guidance'],
     },
 ];

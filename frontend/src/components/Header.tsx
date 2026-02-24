@@ -1,8 +1,11 @@
 import { useState } from 'react';
-import { Menu, X, Star } from 'lucide-react';
+import { Menu, X, Star, ShieldCheck } from 'lucide-react';
+import { useInternetIdentity } from '../hooks/useInternetIdentity';
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const { identity } = useInternetIdentity();
+    const isAuthenticated = !!identity;
 
     const navLinks = [
         { label: 'About', href: '#about' },
@@ -41,6 +44,15 @@ export default function Header() {
                                 {link.label}
                             </a>
                         ))}
+                        {isAuthenticated && (
+                            <a
+                                href="/admin"
+                                className="flex items-center gap-1.5 font-sans text-sm font-medium text-saffron hover:text-saffron-dark transition-colors duration-200 tracking-wide"
+                            >
+                                <ShieldCheck className="w-4 h-4" />
+                                Admin
+                            </a>
+                        )}
                         <a
                             href="https://forms.gle/GSnWKXhVAdfjjjRx6"
                             target="_blank"
@@ -74,6 +86,16 @@ export default function Header() {
                                 {link.label}
                             </a>
                         ))}
+                        {isAuthenticated && (
+                            <a
+                                href="/admin"
+                                onClick={() => setMenuOpen(false)}
+                                className="flex items-center gap-1.5 font-sans text-sm font-medium text-saffron hover:text-saffron-dark transition-colors py-2 px-2"
+                            >
+                                <ShieldCheck className="w-4 h-4" />
+                                Admin Portal
+                            </a>
+                        )}
                         <a
                             href="https://forms.gle/GSnWKXhVAdfjjjRx6"
                             target="_blank"

@@ -16,10 +16,21 @@ export interface ContactEntry {
   'message' : string,
   'phone' : string,
 }
+export type UserRole = { 'admin' : null } |
+  { 'user' : null } |
+  { 'guest' : null };
 export interface _SERVICE {
-  'getAllNewsletterEmails' : ActorMethod<[], Array<string>>,
+  '_initializeAccessControlWithSecret' : ActorMethod<[string], undefined>,
+  'adminGetAllContacts' : ActorMethod<
+    [],
+    Array<[Principal, Array<ContactEntry>]>
+  >,
+  'adminGetAllNewsletterEmails' : ActorMethod<[], Array<string>>,
+  'assignCallerUserRole' : ActorMethod<[Principal, UserRole], undefined>,
+  'getCallerUserRole' : ActorMethod<[], UserRole>,
   'getContactInfo' : ActorMethod<[], { 'email' : string, 'phone' : string }>,
   'getUserContacts' : ActorMethod<[Principal], Array<ContactEntry>>,
+  'isCallerAdmin' : ActorMethod<[], boolean>,
   'submitContactEntry' : ActorMethod<[string, string, string, string], boolean>,
   'subscribeNewsletter' : ActorMethod<[string], boolean>,
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
+  "projectStateVersion": 13,
   "summary": "Premium Vedic astrology consultation and online course website for SHRIMADHAV ASTROLOGY by Astrologer Nishant Madhav. Features a light ivory/warm cream background with gold (#D4AF37) and saffron (#FF9933) accents, subtle mandala patterns, and a luxurious spiritual aesthetic. Includes Hero, About, Consultation Services, Courses, and Contact sections. All booking/enrollment links point to external Google Forms (no internal payment or booking system).",
   "architectural_notes": [
     "All consultation and course buttons open external Google Forms in a new tab — no internal booking or payment system",
@@ -9,7 +9,6 @@
   ],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Soft celestial hero background with warm ivory sky, glowing golden stars, subtle sacred geometry and mandala overlay in gold and cream tones (hero-bg.dim_1920x1080.png)\n- Circular decorative mandala pattern in gold and saffron on a transparent/cream background, for use as section accent or background tile (mandala-pattern.dim_600x600.png)\n- Elegant circular avatar placeholder with an astrologer silhouette and a celestial/stars backdrop in gold and ivory tones (astrologer-avatar.dim_400x400.png)",
   "existing_features": [
     {
       "id": "feature-apply-a-global-visual-theme-across-the-entire-site-light-ivory-warm-cream-background-faf6ef-or-similar-gold-accent-color-d4af37-saffron-highlight-color-ff9933-elegant-serif-font-e-g-playfair-display-or-similar-for-all-headings-clean-modern-sans-serif-font-e-g-inter-or-lato-for-body-text-add-subtle-celestial-mandala-svg-decorative-patterns-in-the-background-ensure-the-layout-is-fully-mobile-responsive",
@@ -74,6 +73,70 @@
         "REQ-8"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-create-a-protected-admin-portal-page-route-admin-in-the-frontend-the-page-must-require-internet-identity-login-to-access-unauthenticated-users-should-see-a-login-prompt-once-authenticated-as-the-admin-display-two-tabbed-sections-1-contact-submissions-showing-a-table-of-all-submitted-contact-form-entries-name-email-phone-message-timestamp-if-available-2-newsletter-subscribers-showing-a-list-of-all-subscribed-email-addresses-with-a-total-count-apply-the-existing-ivory-gold-saffron-visual-theme-consistently-to-this-page",
+      "title": "Create a protected Admin Portal page (route `/admin`) in the frontend. The page must require Internet Identity login to access — unauthenticated users should see a login prompt. Once authenticated as the admin, display two tabbed sections: (1) 'Contact Submissions' showing a table of all submitted contact form entries (Name, Email, Phone, Message, timestamp if available); (2) 'Newsletter Subscribers' showing a list of all subscribed email addresses with a total count. Apply the existing ivory/gold/saffron visual theme consistently to this page.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-react-query-hook-usegetcontactsubmissions-and-usegetnewslettersubscribers-in-the-frontend-hooks-layer-that-call-the-corresponding-backend-query-functions-and-return-the-data-for-use-in-the-admin-portal-page",
+      "title": "Add a React Query hook `useGetContactSubmissions` and `useGetNewsletterSubscribers` in the frontend hooks layer that call the corresponding backend query functions and return the data for use in the Admin Portal page.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-the-avatar-placeholder-image-in-the-about-section-xpath-html-1-body-1-div-1-div-1-main-1-section-2-div-2-div-2-div-1-div-1-div-1-img-1-with-the-uploaded-photo-of-astrologer-nishant-madhav-save-the-uploaded-image-as-frontend-public-assets-generated-astrologer-nishant-png-and-update-the-img-src-in-frontend-src-components-about-tsx-to-reference-this-new-file",
+      "title": "Replace the avatar/placeholder image in the About section (XPath: /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[2]/div[2]/div[1]/div[1]/div[1]/img[1]) with the uploaded photo of Astrologer Nishant Madhav. Save the uploaded image as `frontend/public/assets/generated/astrologer-nishant.png` and update the `<img>` src in `frontend/src/components/About.tsx` to reference this new file.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-save-the-uploaded-image-untitled-1-png-as-frontend-public-assets-generated-astrologer-nishant-png-and-update-the-img-element-at-xpath-html-1-body-1-div-1-div-1-main-1-section-2-div-2-div-2-div-1-div-1-div-1-img-1-in-frontend-src-components-about-tsx-to-use-assets-generated-astrologer-nishant-png-as-its-src-replacing-the-current-avatar-placeholder-image-with-the-actual-photo-of-astrologer-nishant-madhav",
+      "title": "Save the uploaded image (Untitled-1.png) as `frontend/public/assets/generated/astrologer-nishant.png` and update the `<img>` element at XPath /html[1]/body[1]/div[1]/div[1]/main[1]/section[2]/div[2]/div[2]/div[1]/div[1]/div[1]/img[1] in `frontend/src/components/About.tsx` to use `/assets/generated/astrologer-nishant.png` as its `src`, replacing the current avatar/placeholder image with the actual photo of Astrologer Nishant Madhav.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-revert-frontend-src-components-about-tsx-to-use-the-avatar-icon-placeholder-image-instead-of-assets-generated-astrologer-nishant-png-replace-the-current-img-src-assets-generated-astrologer-nishant-png-with-the-original-avatar-icon-placeholder-that-was-present-before-the-photo-was-uploaded",
+      "title": "Revert `frontend/src/components/About.tsx` to use the avatar/icon placeholder image instead of `/assets/generated/astrologer-nishant.png`. Replace the current `<img src=\"/assets/generated/astrologer-nishant.png\">` with the original avatar/icon placeholder that was present before the photo was uploaded.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-frontend-src-components-courses-tsx-update-the-enroll-now-button-href-for-the-panchang-remedies-course-to-https-docs-google-com-forms-d-e-1faipqlsfybqdmcnaag5e-hj22acr9misynioe9duakbdgdotxlzc1ow-viewform-replacing-the-previous-google-form-link",
+      "title": "In `frontend/src/components/Courses.tsx`, update the 'Enroll Now' button href for the PANCHANG & REMEDIES COURSE to 'https://docs.google.com/forms/d/e/1FAIpQLSfYBQDmcnAag5e_Hj22ACr9mIsYnioe9DuAkBdGDotXLZC1Ow/viewform', replacing the previous Google Form link.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-frontend-src-components-courses-tsx-update-the-enroll-now-button-href-for-the-advanced-predictive-astrology-course-to-https-docs-google-com-forms-d-e-1faipqlsdqtujfhdvqzn60ucldnl4mbcle2d67-ypmkx-zpfesd-msoq-viewform-usp-header-replacing-the-previous-google-form-link",
+      "title": "In `frontend/src/components/Courses.tsx`, update the 'Enroll Now' button href for the ADVANCED PREDICTIVE ASTROLOGY course to 'https://docs.google.com/forms/d/e/1FAIpQLSdQTUJfhdVQzn60UcLdNL4mBcle2D67_ypmkx_zpFESd_mSoQ/viewform?usp=header', replacing the previous Google Form link.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-frontend-src-components-courses-tsx-update-the-enroll-now-button-href-for-the-predictive-prashna-course-to-https-docs-google-com-forms-d-e-1faipqlse3slqek7s213e4lk9caft7osrvh2zjx-fyp9x9m0syc9hv6w-viewform-usp-header-replacing-the-previous-google-form-link",
+      "title": "In `frontend/src/components/Courses.tsx`, update the 'Enroll Now' button href for the PREDICTIVE PRASHNA COURSE to 'https://docs.google.com/forms/d/e/1FAIpQLSe3SLqEK7S213E4Lk9cAfT7OsRVH2ZJx_fyP9x9m0SyC9hV6w/viewform?usp=header', replacing the previous Google Form link.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -104,6 +167,32 @@
     {
       "id": "AR-5",
       "summary": "Contact section with phone, email, contact form, WhatsApp floating button, and newsletter signup",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Admin portal for the site to manage contact form submissions, newsletter subscribers, and other backend data",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Add a backend query function to retrieve all contact form submissions stored in the canister, and a backend query function to retrieve all newsletter subscriber emails. Both functions should be restricted so only an authorized admin principal can call them successfully (return an error or empty result for unauthorized callers).",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Update the hero/site picture/image with a new or improved version",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Update course enrollment links: Panchang & Remedy Course to new Google Form URL, Advanced Predictive Astrology to new Google Form URL, Predictive Prashna Course to new Google Form URL",
       "reqIds": [],
       "status": "pending"
     }

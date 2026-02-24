@@ -2,86 +2,9 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-apply-a-global-visual-theme-across-the-entire-site-light-ivory-warm-cream-background-faf6ef-or-similar-gold-accent-color-d4af37-saffron-highlight-color-ff9933-elegant-serif-font-e-g-playfair-display-or-similar-for-all-headings-clean-modern-sans-serif-font-e-g-inter-or-lato-for-body-text-add-subtle-celestial-mandala-svg-decorative-patterns-in-the-background-ensure-the-layout-is-fully-mobile-responsive",
-      "featureTitle": "Apply a global visual theme across the entire site: light ivory/warm cream background (#FAF6EF or similar), gold accent color #D4AF37, saffron highlight color #FF9933, elegant serif font (e.g., Playfair Display or similar) for all headings, clean modern sans-serif font (e.g., Inter or Lato) for body text. Add subtle celestial/mandala SVG decorative patterns in the background. Ensure the layout is fully mobile responsive.",
+      "featureId": "feature-in-frontend-src-components-courses-tsx-update-the-enroll-now-button-href-for-the-panchang-remedies-course-to-https-docs-google-com-forms-d-e-1faipqlsfybqdmcnaag5e-hj22acr9misynioe9duakbdgdotxlzc1ow-viewform-replacing-the-previous-google-form-link",
+      "featureTitle": "In `frontend/src/components/Courses.tsx`, update the 'Enroll Now' button href for the PANCHANG & REMEDIES COURSE to 'https://docs.google.com/forms/d/e/1FAIpQLSfYBQDmcnAag5e_Hj22ACr9mIsYnioe9DuAkBdGDotXLZC1Ow/viewform', replacing the previous Google Form link.",
       "files": [
-        "frontend/src/index.css",
-        "frontend/tailwind.config.js"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-1"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-build-a-full-width-hero-section-at-the-top-of-the-page-with-site-name-shrimadhav-astrology-and-tagline-by-astrologer-nishant-madhav-in-the-header-nav-area-headline-awaken-to-the-wisdom-written-in-your-stars-subheadline-personalized-vedic-astrology-consultations-and-transformational-courses-to-align-your-life-with-divine-timing-a-saffron-cta-button-labeled-book-consultation-that-opens-https-forms-gle-gsnwkxhvadfjjjrx6-in-a-new-tab-a-gold-outlined-secondary-button-labeled-explore-courses-that-smooth-scrolls-to-the-courses-section",
-      "featureTitle": "Build a full-width Hero section at the top of the page with: site name 'SHRIMADHAV ASTROLOGY' and tagline 'By Astrologer Nishant Madhav' in the header/nav area; headline 'Awaken to the Wisdom Written in Your Stars'; subheadline 'Personalized Vedic astrology consultations and transformational courses to align your life with divine timing.'; a saffron CTA button labeled 'Book Consultation' that opens https://forms.gle/GSnWKXhVAdfjjjRx6 in a new tab; a gold-outlined secondary button labeled 'Explore Courses' that smooth-scrolls to the Courses section.",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/Hero.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-2"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-build-an-about-section-introducing-astrologer-nishant-madhav-include-a-brief-biography-paragraph-a-list-of-expertise-areas-birth-chart-analysis-nakshatra-system-dasha-predictive-astrology-career-marriage-guidance-and-a-mission-statement-focused-on-clarity-dharma-and-spiritual-alignment-use-an-avatar-icon-placeholder-for-the-astrologer-s-photo",
-      "featureTitle": "Build an About section introducing Astrologer Nishant Madhav. Include a brief biography paragraph, a list of expertise areas (Birth Chart Analysis, Nakshatra System, Dasha & Predictive Astrology, Career & Marriage Guidance), and a mission statement focused on clarity, dharma, and spiritual alignment. Use an avatar/icon placeholder for the astrologer's photo.",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/About.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-3"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-build-a-consultation-services-section-with-exactly-4-gold-bordered-service-cards-each-card-should-display-a-service-title-a-brief-description-and-a-book-now-button-that-opens-https-forms-gle-gsnwkxhvadfjjjrx6-in-a-new-tab-suggested-service-titles-birth-chart-reading-career-finance-consultation-marriage-relationship-guidance-dasha-predictive-analysis-no-internal-booking-system",
-      "featureTitle": "Build a Consultation Services section with exactly 4 gold-bordered service cards. Each card should display a service title, a brief description, and a 'Book Now' button that opens https://forms.gle/GSnWKXhVAdfjjjRx6 in a new tab. Suggested service titles: 'Birth Chart Reading', 'Career & Finance Consultation', 'Marriage & Relationship Guidance', 'Dasha & Predictive Analysis'. No internal booking system.",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/Services.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-4"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-build-a-courses-section-with-4-premium-course-cards-each-card-must-show-course-title-mrp-with-strikethrough-discounted-price-highlighted-in-saffron-ff9933-a-short-description-and-an-enroll-now-button-linking-to-its-respective-google-form-in-a-new-tab-course-details-1-nakshatra-master-course-mrp-35-000-price-28-000-form-https-docs-google-com-forms-d-e-1faipqlsdyepr3ercod1cxh68fxhff5ewmpotml6fznh8bjvhcc22vmw-viewform-usp-header-2-advanced-predictive-astrology-mrp-30-000-price-21-000-form-https-docs-google-com-forms-d-1xztvhukrokzvpuay2f3pguglh0aqxc65fypqywge1qa-edit-3-predictive-prashna-course-mrp-14-500-price-11-000-form-https-docs-google-com-forms-d-1zszzuwn83u5qyhtpx7yvw5epryt90zxwj-5rl4w-bls-edit-4-panchang-remedies-course-mrp-15-000-price-11-000-form-https-docs-google-com-forms-d-1td88czwfbfd8-3hv2twnwjdcc-gc5ewvij2hkomjbgi-edit-no-internal-checkout",
-      "featureTitle": "Build a Courses section with 4 premium course cards. Each card must show: course title, MRP with strikethrough, discounted price highlighted in saffron (#FF9933), a short description, and an 'Enroll Now' button linking to its respective Google Form in a new tab. Course details: (1) NAKSHATRA MASTER COURSE – MRP ₹35,000, Price ₹28,000, Form: https://docs.google.com/forms/d/e/1FAIpQLSdYEPR3eRcOd1cXh68FXhff5ewMpoTml6fzNH8BJvHcC22VMw/viewform?usp=header; (2) ADVANCED PREDICTIVE ASTROLOGY – MRP ₹30,000, Price ₹21,000, Form: https://docs.google.com/forms/d/1XzTVhuKroKZVpuaY2f3PgUglh0AQXc65fYPqyWGE1qA/edit; (3) PREDICTIVE PRASHNA COURSE – MRP ₹14,500, Price ₹11,000, Form: https://docs.google.com/forms/d/1ZsZzuWn83u5qYHtPx7yvW5epRyt90ZXwJ_5rL4w-BLs/edit; (4) PANCHANG & REMEDIES COURSE – MRP ₹15,000, Price ₹11,000, Form: https://docs.google.com/forms/d/1td88CZwfBFd8-3hv2TwNwJDCc_gC5ewviJ2HKOMjbgI/edit. No internal checkout.",
-      "files": [
-        "frontend/src/App.tsx",
         "frontend/src/components/Courses.tsx"
       ],
       "components": [
@@ -89,67 +12,49 @@
         "shadcn-ui@1.0.0",
         "build-template-react@1.0.0",
         "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
+        "github-export-icp-cli@1.0.0",
+        "authorization@4.0.0"
       ],
       "testIds": [
-        "REQ-5"
+        "REQ-15"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-build-a-contact-section-containing-display-of-phone-number-8700810124-and-email-shrimadhavastrology-gmail-com-a-contact-form-with-fields-for-name-email-phone-and-message-form-submission-should-store-the-entry-in-backend-state-and-show-a-success-message-a-newsletter-signup-input-with-email-field-and-subscribe-button-store-emails-in-backend-and-a-floating-whatsapp-button-fixed-to-the-bottom-right-corner-that-opens-https-wa-me-918700810124-in-a-new-tab",
-      "featureTitle": "Build a Contact section containing: display of phone number 8700810124 and email shrimadhavastrology@gmail.com; a contact form with fields for Name, Email, Phone, and Message (form submission should store the entry in backend state and show a success message); a newsletter signup input with email field and subscribe button (store emails in backend); and a floating WhatsApp button fixed to the bottom-right corner that opens https://wa.me/918700810124 in a new tab.",
+      "featureId": "feature-in-frontend-src-components-courses-tsx-update-the-enroll-now-button-href-for-the-advanced-predictive-astrology-course-to-https-docs-google-com-forms-d-e-1faipqlsdqtujfhdvqzn60ucldnl4mbcle2d67-ypmkx-zpfesd-msoq-viewform-usp-header-replacing-the-previous-google-form-link",
+      "featureTitle": "In `frontend/src/components/Courses.tsx`, update the 'Enroll Now' button href for the ADVANCED PREDICTIVE ASTROLOGY course to 'https://docs.google.com/forms/d/e/1FAIpQLSdQTUJfhdVQzn60UcLdNL4mBcle2D67_ypmkx_zpFESd_mSoQ/viewform?usp=header', replacing the previous Google Form link.",
       "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/Contact.tsx",
-        "frontend/src/components/WhatsAppButton.tsx"
+        "frontend/src/components/Courses.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
         "shadcn-ui@1.0.0",
         "build-template-react@1.0.0",
         "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
+        "github-export-icp-cli@1.0.0",
+        "authorization@4.0.0"
       ],
       "testIds": [
-        "REQ-6"
+        "REQ-16"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-add-proper-seo-meta-tags-to-the-app-title-shrimadhav-astrology-vedic-astrology-consultations-courses-by-nishant-madhav-meta-description-about-personalized-vedic-astrology-consultations-and-courses-and-relevant-keywords-include-open-graph-tags-for-social-sharing",
-      "featureTitle": "Add proper SEO meta tags to the app: title 'SHRIMADHAV ASTROLOGY – Vedic Astrology Consultations & Courses by Nishant Madhav', meta description about personalized Vedic astrology consultations and courses, and relevant keywords. Include Open Graph tags for social sharing.",
+      "featureId": "feature-in-frontend-src-components-courses-tsx-update-the-enroll-now-button-href-for-the-predictive-prashna-course-to-https-docs-google-com-forms-d-e-1faipqlse3slqek7s213e4lk9caft7osrvh2zjx-fyp9x9m0syc9hv6w-viewform-usp-header-replacing-the-previous-google-form-link",
+      "featureTitle": "In `frontend/src/components/Courses.tsx`, update the 'Enroll Now' button href for the PREDICTIVE PRASHNA COURSE to 'https://docs.google.com/forms/d/e/1FAIpQLSe3SLqEK7S213E4Lk9cAfT7OsRVH2ZJx_fyP9x9m0SyC9hV6w/viewform?usp=header', replacing the previous Google Form link.",
       "files": [
-        "frontend/index.html"
+        "frontend/src/components/Courses.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
         "shadcn-ui@1.0.0",
         "build-template-react@1.0.0",
         "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
+        "github-export-icp-cli@1.0.0",
+        "authorization@4.0.0"
       ],
       "testIds": [
-        "REQ-7"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-generate-a-hero-background-image-a-soft-celestial-scene-with-a-warm-ivory-sky-faint-mandala-geometry-overlay-glowing-stars-and-subtle-cosmic-light-in-warm-gold-and-cream-tones-also-generate-a-decorative-mandala-pattern-tile-suitable-for-section-backgrounds",
-      "featureTitle": "Generate a hero background image: a soft celestial scene with a warm ivory sky, faint mandala geometry overlay, glowing stars and subtle cosmic light in warm gold and cream tones. Also generate a decorative mandala pattern tile suitable for section backgrounds.",
-      "files": [
-        "frontend/src/components/Hero.tsx",
-        "frontend/src/index.css"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-8"
+        "REQ-17"
       ],
       "confidence": "high"
     }

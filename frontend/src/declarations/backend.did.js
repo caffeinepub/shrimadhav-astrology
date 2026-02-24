@@ -14,9 +14,22 @@ export const ContactEntry = IDL.Record({
   'message' : IDL.Text,
   'phone' : IDL.Text,
 });
+export const UserRole = IDL.Variant({
+  'admin' : IDL.Null,
+  'user' : IDL.Null,
+  'guest' : IDL.Null,
+});
 
 export const idlService = IDL.Service({
-  'getAllNewsletterEmails' : IDL.Func([], [IDL.Vec(IDL.Text)], ['query']),
+  '_initializeAccessControlWithSecret' : IDL.Func([IDL.Text], [], []),
+  'adminGetAllContacts' : IDL.Func(
+      [],
+      [IDL.Vec(IDL.Tuple(IDL.Principal, IDL.Vec(ContactEntry)))],
+      ['query'],
+    ),
+  'adminGetAllNewsletterEmails' : IDL.Func([], [IDL.Vec(IDL.Text)], ['query']),
+  'assignCallerUserRole' : IDL.Func([IDL.Principal, UserRole], [], []),
+  'getCallerUserRole' : IDL.Func([], [UserRole], ['query']),
   'getContactInfo' : IDL.Func(
       [],
       [IDL.Record({ 'email' : IDL.Text, 'phone' : IDL.Text })],
@@ -27,6 +40,7 @@ export const idlService = IDL.Service({
       [IDL.Vec(ContactEntry)],
       ['query'],
     ),
+  'isCallerAdmin' : IDL.Func([], [IDL.Bool], ['query']),
   'submitContactEntry' : IDL.Func(
       [IDL.Text, IDL.Text, IDL.Text, IDL.Text],
       [IDL.Bool],
@@ -44,9 +58,26 @@ export const idlFactory = ({ IDL }) => {
     'message' : IDL.Text,
     'phone' : IDL.Text,
   });
+  const UserRole = IDL.Variant({
+    'admin' : IDL.Null,
+    'user' : IDL.Null,
+    'guest' : IDL.Null,
+  });
   
   return IDL.Service({
-    'getAllNewsletterEmails' : IDL.Func([], [IDL.Vec(IDL.Text)], ['query']),
+    '_initializeAccessControlWithSecret' : IDL.Func([IDL.Text], [], []),
+    'adminGetAllContacts' : IDL.Func(
+        [],
+        [IDL.Vec(IDL.Tuple(IDL.Principal, IDL.Vec(ContactEntry)))],
+        ['query'],
+      ),
+    'adminGetAllNewsletterEmails' : IDL.Func(
+        [],
+        [IDL.Vec(IDL.Text)],
+        ['query'],
+      ),
+    'assignCallerUserRole' : IDL.Func([IDL.Principal, UserRole], [], []),
+    'getCallerUserRole' : IDL.Func([], [UserRole], ['query']),
     'getContactInfo' : IDL.Func(
         [],
         [IDL.Record({ 'email' : IDL.Text, 'phone' : IDL.Text })],
@@ -57,6 +88,7 @@ export const idlFactory = ({ IDL }) => {
         [IDL.Vec(ContactEntry)],
         ['query'],
       ),
+    'isCallerAdmin' : IDL.Func([], [IDL.Bool], ['query']),
     'submitContactEntry' : IDL.Func(
         [IDL.Text, IDL.Text, IDL.Text, IDL.Text],
         [IDL.Bool],
