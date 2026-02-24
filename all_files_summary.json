@@ -1,0 +1,23 @@
+{
+  "backend/main.mo": "Motoko actor defining a backend canister with persistent stores for contact form entries (per-principal) and newsletter emails, exposing submit, subscribe, and query functions.",
+  "feature_evidence.json": "Feature evidence report mapping implemented features (global theme, hero, about, etc.) to their source files, components, test IDs, and confidence levels.",
+  "frontend-file-summaries.txt": "JSON dictionary providing one-line descriptions of each frontend source file for build planning reference.",
+  "frontend/index.css": "Tailwind base stylesheet defining OKLCH CSS custom properties for light and dark color tokens (background, foreground, gold, saffron, etc.) used throughout the design system.",
+  "frontend/index.html": "HTML entry point with SEO meta tags, Open Graph tags, and Google Fonts preconnect/import for Playfair Display and Inter typefaces.",
+  "frontend/src/App.tsx": "Root React component that assembles the single-page layout by composing Header, Hero, About, Services, Courses, Contact, Footer, and WhatsAppButton components.",
+  "frontend/src/components/About.tsx": "About section component displaying Astrologer Nishant Madhav's avatar, biography, four expertise area cards, and a mission statement with a mandala background overlay.",
+  "frontend/src/components/Contact.tsx": "Contact section component with phone/email info cards, a newsletter signup form, and a contact form that submits data to the backend canister via React Query mutations.",
+  "frontend/src/components/Courses.tsx": "Defines and renders a 'Premium Courses' section with four Vedic astrology course cards, each showing pricing, features, badges, and a link to a Google Form for enrollment.",
+  "frontend/src/components/Footer.tsx": "Renders the site footer with brand info, quick navigation links, a consultation CTA button, and a copyright notice with a mandala background pattern.",
+  "frontend/src/components/Header.tsx": "Fixed top navigation header with the site logo, desktop nav links, a 'Book Consultation' button, and a responsive mobile hamburger menu.",
+  "frontend/src/components/Hero.tsx": "Full-screen hero section with a background image, headline, gold divider, and two CTA buttons for booking a consultation or smooth-scrolling to the courses section.",
+  "frontend/src/components/Services.tsx": "Renders a grid of four Vedic astrology consultation service cards (birth chart, career, relationships, predictive) each with an icon, description, highlights, and a booking link.",
+  "frontend/src/components/WhatsAppButton.tsx": "Fixed floating WhatsApp chat button in the bottom-right corner that links to a specific WhatsApp number, with a hover tooltip.",
+  "frontend/src/hooks/useActor.ts": "Custom React hook that creates and caches an ICP backend actor using React Query, returning either an authenticated or anonymous actor based on the current Internet Identity, and invalidating dependent queries when the actor changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides a React context and hook for Internet Identity authentication using DFINITY's AuthClient, exposing login/logout functions and status flags. Includes an `InternetIdentityProvider` component that persists identity across page reloads.",
+  "frontend/src/hooks/useQueries.ts": "Defines two React Query mutations: `useSubmitContact` for submitting contact form entries and `useSubscribeNewsletter` for newsletter email subscriptions, both using the canister actor.",
+  "frontend/src/index.css": "Global CSS file that sets up Tailwind base/components/utilities and defines CSS custom properties for the site's ivory/cream, gold, and saffron color theme, along with typography and dark mode variables.",
+  "frontend/src/main.tsx": "Application entry point that mounts the React app with `QueryClientProvider` and `InternetIdentityProvider` wrapping the root `App` component.",
+  "frontend/tailwind.config.js": "Tailwind CSS configuration extending the default theme with custom fonts (Playfair Display, Inter), oklch-based color tokens (gold, saffron, ivory, chart, sidebar), border radii, and box shadows, plus typography, container-queries, and animate plugins.",
+  "project_state.json": "Project state metadata describing the SHRIMADHAV ASTROLOGY site's features, design system (ivory/gold/saffron theme), architectural notes (external Google Forms for bookings), and image requirements."
+}

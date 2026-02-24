@@ -1,0 +1,211 @@
+{
+  "kind": "build_request",
+  "title": "SHRIMADHAV ASTROLOGY – Premium Vedic Astrology Website",
+  "projectName": "Shrimadhav Astrology",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Apply a global visual theme across the entire site: light ivory/warm cream background (#FAF6EF or similar), gold accent color #D4AF37, saffron highlight color #FF9933, elegant serif font (e.g., Playfair Display or similar) for all headings, clean modern sans-serif font (e.g., Inter or Lato) for body text. Add subtle celestial/mandala SVG decorative patterns in the background. Ensure the layout is fully mobile responsive.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Light ivory / warm cream background",
+          "Gold accents (#D4AF37 style)",
+          "Saffron highlight color (#FF9933)",
+          "Elegant serif font for headings",
+          "Clean modern font for body",
+          "Fully mobile responsive"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Background is ivory/warm cream throughout all sections",
+        "Gold (#D4AF37) is used for borders, dividers, and decorative accents",
+        "Saffron (#FF9933) is used for highlighted CTAs and price highlights",
+        "Headings render in a serif font; body text in a sans-serif font",
+        "Subtle mandala or celestial SVG pattern visible in hero/background areas",
+        "Layout adapts correctly on mobile (375px), tablet (768px), and desktop (1280px)"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Build a full-width Hero section at the top of the page with: site name 'SHRIMADHAV ASTROLOGY' and tagline 'By Astrologer Nishant Madhav' in the header/nav area; headline 'Awaken to the Wisdom Written in Your Stars'; subheadline 'Personalized Vedic astrology consultations and transformational courses to align your life with divine timing.'; a saffron CTA button labeled 'Book Consultation' that opens https://forms.gle/GSnWKXhVAdfjjjRx6 in a new tab; a gold-outlined secondary button labeled 'Explore Courses' that smooth-scrolls to the Courses section.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Awaken to the Wisdom Written in Your Stars",
+          "Book Consultation button must redirect to: https://forms.gle/GSnWKXhVAdfjjjRx6",
+          "Open in new tab",
+          "Explore Courses"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero headline and subheadline are prominently displayed",
+        "'Book Consultation' button opens https://forms.gle/GSnWKXhVAdfjjjRx6 in a new tab",
+        "'Explore Courses' button scrolls to the Courses section",
+        "Hero section spans full viewport width with cosmic background styling"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Build an About section introducing Astrologer Nishant Madhav. Include a brief biography paragraph, a list of expertise areas (Birth Chart Analysis, Nakshatra System, Dasha & Predictive Astrology, Career & Marriage Guidance), and a mission statement focused on clarity, dharma, and spiritual alignment. Use an avatar/icon placeholder for the astrologer's photo.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Introduction of Astrologer Nishant Madhav",
+          "Birth Chart Analysis",
+          "Nakshatra System",
+          "Dasha & Predictive Astrology",
+          "Career & Marriage Guidance",
+          "Mission focused on clarity, dharma, and spiritual alignment"
+        ]
+      },
+      "acceptanceCriteria": [
+        "About section is visible with Nishant Madhav's name as heading",
+        "All four expertise areas are listed",
+        "Mission statement about clarity, dharma, and spiritual alignment is present",
+        "Section has gold accent styling consistent with site theme"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Build a Consultation Services section with exactly 4 gold-bordered service cards. Each card should display a service title, a brief description, and a 'Book Now' button that opens https://forms.gle/GSnWKXhVAdfjjjRx6 in a new tab. Suggested service titles: 'Birth Chart Reading', 'Career & Finance Consultation', 'Marriage & Relationship Guidance', 'Dasha & Predictive Analysis'. No internal booking system.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create 4 elegant gold-bordered service cards",
+          "Each 'Book Now' button must redirect to: https://forms.gle/GSnWKXhVAdfjjjRx6",
+          "No internal booking system"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Exactly 4 service cards are displayed",
+        "Each card has a gold border",
+        "Each 'Book Now' button opens https://forms.gle/GSnWKXhVAdfjjjRx6 in a new tab",
+        "No payment or booking form exists internally"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Build a Courses section with 4 premium course cards. Each card must show: course title, MRP with strikethrough, discounted price highlighted in saffron (#FF9933), a short description, and an 'Enroll Now' button linking to its respective Google Form in a new tab. Course details: (1) NAKSHATRA MASTER COURSE – MRP ₹35,000, Price ₹28,000, Form: https://docs.google.com/forms/d/e/1FAIpQLSdYEPR3eRcOd1cXh68FXhff5ewMpoTml6fzNH8BJvHcC22VMw/viewform?usp=header; (2) ADVANCED PREDICTIVE ASTROLOGY – MRP ₹30,000, Price ₹21,000, Form: https://docs.google.com/forms/d/1XzTVhuKroKZVpuaY2f3PgUglh0AQXc65fYPqyWGE1qA/edit; (3) PREDICTIVE PRASHNA COURSE – MRP ₹14,500, Price ₹11,000, Form: https://docs.google.com/forms/d/1ZsZzuWn83u5qYHtPx7yvW5epRyt90ZXwJ_5rL4w-BLs/edit; (4) PANCHANG & REMEDIES COURSE – MRP ₹15,000, Price ₹11,000, Form: https://docs.google.com/forms/d/1td88CZwfBFd8-3hv2TwNwJDCc_gC5ewviJ2HKOMjbgI/edit. No internal checkout.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "NAKSHATRA MASTER COURSE",
+          "ADVANCED PREDICTIVE ASTROLOGY",
+          "PREDICTIVE PRASHNA COURSE",
+          "PANCHANG & REMEDIES COURSE",
+          "MRP (Strikethrough)",
+          "Discounted Price (Highlighted in saffron)",
+          "No internal checkout system"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All 4 course cards are displayed with correct titles",
+        "MRP is shown with strikethrough styling",
+        "Discounted price is highlighted in saffron",
+        "Each 'Enroll Now' button opens its specific Google Form in a new tab",
+        "No internal payment or checkout UI exists"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Build a Contact section containing: display of phone number 8700810124 and email shrimadhavastrology@gmail.com; a contact form with fields for Name, Email, Phone, and Message (form submission should store the entry in backend state and show a success message); a newsletter signup input with email field and subscribe button (store emails in backend); and a floating WhatsApp button fixed to the bottom-right corner that opens https://wa.me/918700810124 in a new tab.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Phone Number: 8700810124",
+          "Email: shrimadhavastrology@gmail.com",
+          "Contact form",
+          "WhatsApp floating button",
+          "Newsletter signup"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Phone and email are visible in the Contact section",
+        "Contact form has Name, Email, Phone, Message fields and submits successfully",
+        "Newsletter signup stores email and shows confirmation",
+        "Floating WhatsApp button is fixed bottom-right and links to wa.me/918700810124 in new tab",
+        "Backend stores contact form submissions and newsletter emails"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Add proper SEO meta tags to the app: title 'SHRIMADHAV ASTROLOGY – Vedic Astrology Consultations & Courses by Nishant Madhav', meta description about personalized Vedic astrology consultations and courses, and relevant keywords. Include Open Graph tags for social sharing.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "SEO optimized"
+        ]
+      },
+      "acceptanceCriteria": [
+        "HTML title tag is set correctly",
+        "Meta description tag is present with relevant content",
+        "Open Graph meta tags (og:title, og:description) are present"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Generate a hero background image: a soft celestial scene with a warm ivory sky, faint mandala geometry overlay, glowing stars and subtle cosmic light in warm gold and cream tones. Also generate a decorative mandala pattern tile suitable for section backgrounds.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Soft celestial glow and subtle mandala patterns",
+          "Luxurious, spiritual, divine aesthetic"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero section uses the generated celestial background image",
+        "Mandala pattern tile is used as a subtle repeating background or section decoration",
+        "Images are served from frontend/public/assets/generated"
+      ]
+    }
+  ],
+  "constraints": [
+    "All consultation 'Book Now' and 'Book Consultation' buttons must link to https://forms.gle/GSnWKXhVAdfjjjRx6 (new tab) — no exceptions",
+    "Each course 'Enroll Now' button must link to its specific Google Form URL (new tab)",
+    "No internal payment gateway or checkout system",
+    "No internal booking management system",
+    "All external links must open in a new tab (target='_blank' with rel='noopener noreferrer')"
+  ],
+  "nonGoals": [
+    "Internal payment processing or e-commerce checkout",
+    "User authentication or login system",
+    "Internal booking calendar or scheduling system",
+    "Course content delivery or video hosting",
+    "Admin dashboard for managing bookings or courses",
+    "Real-time chat or messaging features"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Soft celestial hero background with warm ivory sky, glowing golden stars, subtle sacred geometry and mandala overlay in gold and cream tones (hero-bg.dim_1920x1080.png)",
+      "Circular decorative mandala pattern in gold and saffron on a transparent/cream background, for use as section accent or background tile (mandala-pattern.dim_600x600.png)",
+      "Elegant circular avatar placeholder with an astrologer silhouette and a celestial/stars backdrop in gold and ivory tones (astrologer-avatar.dim_400x400.png)"
+    ],
+    "edits": []
+  }
+}

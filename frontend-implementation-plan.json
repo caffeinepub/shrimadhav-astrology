@@ -1,0 +1,185 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "SHRIMADHAV ASTROLOGY – Premium Vedic Astrology Website Frontend",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Apply global visual theme with ivory/cream background, gold and saffron accents, serif headings, sans-serif body text, celestial SVG patterns, and mobile-responsive layout",
+      "acceptanceCriteria": [
+        "Background is ivory/warm cream throughout all sections",
+        "Gold (#D4AF37) is used for borders, dividers, and decorative accents",
+        "Saffron (#FF9933) is used for highlighted CTAs and price highlights",
+        "Headings render in a serif font; body text in a sans-serif font",
+        "Subtle mandala or celestial SVG pattern visible in hero/background areas",
+        "Layout adapts correctly on mobile (375px), tablet (768px), and desktop (1280px)"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Update global styles to set light ivory/warm cream background (#FAF6EF), define CSS custom properties for gold accent (#D4AF37) and saffron highlight (#FF9933), import Google Fonts (Playfair Display for headings, Inter for body text), and add base responsive typography styles"
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme to include custom colors (ivory, gold, saffron), configure font families (serif: Playfair Display; sans: Inter), add background image utilities for celestial/mandala patterns, and ensure mobile-first breakpoints are configured"
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Build full-width Hero section with site name, headline, subheadline, 'Book Consultation' CTA linking to Google Form, and 'Explore Courses' scroll button",
+      "acceptanceCriteria": [
+        "Hero headline and subheadline are prominently displayed",
+        "'Book Consultation' button opens https://forms.gle/GSnWKXhVAdfjjjRx6 in a new tab",
+        "'Explore Courses' button scrolls to the Courses section",
+        "Hero section spans full viewport width with cosmic background styling"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Hero.tsx",
+          "operation": "create",
+          "description": "Create Hero component with full-width layout, site name 'SHRIMADHAV ASTROLOGY', tagline 'By Astrologer Nishant Madhav', headline 'Awaken to the Wisdom Written in Your Stars', subheadline about personalized Vedic astrology, saffron 'Book Consultation' button opening https://forms.gle/GSnWKXhVAdfjjjRx6 in new tab (target='_blank' rel='noopener noreferrer'), gold-outlined 'Explore Courses' button with smooth scroll to #courses section, and apply celestial background image from frontend/public/assets/generated/hero-bg.dim_1920x1080.png"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the Hero component at the top of the main layout"
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Build About section introducing Astrologer Nishant Madhav with biography, expertise areas, mission statement, and avatar placeholder",
+      "acceptanceCriteria": [
+        "About section is visible with Nishant Madhav's name as heading",
+        "All four expertise areas are listed",
+        "Mission statement about clarity, dharma, and spiritual alignment is present",
+        "Section has gold accent styling consistent with site theme"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/About.tsx",
+          "operation": "create",
+          "description": "Create About component with section heading 'About Astrologer Nishant Madhav', brief biography paragraph, list of four expertise areas (Birth Chart Analysis, Nakshatra System, Dasha & Predictive Astrology, Career & Marriage Guidance), mission statement focused on clarity, dharma, and spiritual alignment, and use frontend/public/assets/generated/astrologer-avatar.dim_400x400.png as avatar placeholder with gold border styling"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the About component after the Hero section"
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Build Consultation Services section with 4 gold-bordered service cards, each with 'Book Now' button linking to Google Form",
+      "acceptanceCriteria": [
+        "Exactly 4 service cards are displayed",
+        "Each card has a gold border",
+        "Each 'Book Now' button opens https://forms.gle/GSnWKXhVAdfjjjRx6 in a new tab",
+        "No payment or booking form exists internally"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Services.tsx",
+          "operation": "create",
+          "description": "Create Services component with section heading 'Consultation Services', render exactly 4 service cards with gold borders using grid layout, each card displaying service title (Birth Chart Reading, Career & Finance Consultation, Marriage & Relationship Guidance, Dasha & Predictive Analysis), brief description, and 'Book Now' button linking to https://forms.gle/GSnWKXhVAdfjjjRx6 in new tab (target='_blank' rel='noopener noreferrer')"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the Services component after the About section"
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Build Courses section with 4 premium course cards showing MRP with strikethrough, saffron-highlighted discounted price, and 'Enroll Now' button linking to specific Google Forms",
+      "acceptanceCriteria": [
+        "All 4 course cards are displayed with correct titles",
+        "MRP is shown with strikethrough styling",
+        "Discounted price is highlighted in saffron",
+        "Each 'Enroll Now' button opens its specific Google Form in a new tab",
+        "No internal payment or checkout UI exists"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Courses.tsx",
+          "operation": "create",
+          "description": "Create Courses component with id='courses' for scroll navigation, section heading 'Premium Courses', render 4 course cards in grid layout, each card displaying: (1) NAKSHATRA MASTER COURSE with MRP ₹35,000 strikethrough, saffron-highlighted price ₹28,000, 'Enroll Now' linking to https://docs.google.com/forms/d/e/1FAIpQLSdYEPR3eRcOd1cXh68FXhff5ewMpoTml6fzNH8BJvHcC22VMw/viewform?usp=header; (2) ADVANCED PREDICTIVE ASTROLOGY with MRP ₹30,000 strikethrough, price ₹21,000, linking to https://docs.google.com/forms/d/1XzTVhuKroKZVpuaY2f3PgUglh0AQXc65fYPqyWGE1qA/edit; (3) PREDICTIVE PRASHNA COURSE with MRP ₹14,500 strikethrough, price ₹11,000, linking to https://docs.google.com/forms/d/1ZsZzuWn83u5qYHtPx7yvW5epRyt90ZXwJ_5rL4w-BLs/edit; (4) PANCHANG & REMEDIES COURSE with MRP ₹15,000 strikethrough, price ₹11,000, linking to https://docs.google.com/forms/d/1td88CZwfBFd8-3hv2TwNwJDCc_gC5ewviJ2HKOMjbgI/edit. All links open in new tab (target='_blank' rel='noopener noreferrer')"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the Courses component after the Services section"
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Build Contact section with phone/email display, contact form with backend submission, newsletter signup, and floating WhatsApp button",
+      "acceptanceCriteria": [
+        "Phone and email are visible in the Contact section",
+        "Contact form has Name, Email, Phone, Message fields and submits successfully",
+        "Newsletter signup stores email and shows confirmation",
+        "Floating WhatsApp button is fixed bottom-right and links to wa.me/918700810124 in new tab",
+        "Backend stores contact form submissions and newsletter emails"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Contact.tsx",
+          "operation": "create",
+          "description": "Create Contact component displaying phone '8700810124' and email 'shrimadhavastrology@gmail.com', include contact form with Name, Email, Phone, Message fields using controlled inputs, handle form submission by calling backend submitContactEntry method, display success message on successful submission, include newsletter signup section with email input and subscribe button calling backend subscribeNewsletter method, show confirmation message on successful newsletter subscription"
+        },
+        {
+          "path": "frontend/src/components/WhatsAppButton.tsx",
+          "operation": "create",
+          "description": "Create WhatsAppButton component as a fixed position button (bottom-right corner) with WhatsApp icon, linking to https://wa.me/918700810124 in new tab (target='_blank' rel='noopener noreferrer'), styled with green background and white icon, visible on all pages"
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and render the Contact component after the Courses section, and render the WhatsAppButton component at the root level so it appears fixed on all pages"
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Add SEO meta tags including title, description, keywords, and Open Graph tags for social sharing",
+      "acceptanceCriteria": [
+        "HTML title tag is set correctly",
+        "Meta description tag is present with relevant content",
+        "Open Graph meta tags (og:title, og:description) are present"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Update HTML head section to include title 'SHRIMADHAV ASTROLOGY – Vedic Astrology Consultations & Courses by Nishant Madhav', meta description tag with content about personalized Vedic astrology consultations and transformational courses, meta keywords tag with relevant astrology terms, and Open Graph meta tags (og:title, og:description, og:type, og:url) for social sharing optimization"
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Wire generated hero background and mandala pattern images into the frontend as static assets",
+      "acceptanceCriteria": [
+        "Hero section uses the generated celestial background image",
+        "Mandala pattern tile is used as a subtle repeating background or section decoration",
+        "Images are served from frontend/public/assets/generated"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Hero.tsx",
+          "operation": "modify",
+          "description": "Update Hero component to use frontend/public/assets/generated/hero-bg.dim_1920x1080.png as background image via inline style or Tailwind background utility, ensure image covers full section with proper positioning"
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add CSS rule for repeating mandala pattern background using frontend/public/assets/generated/mandala-pattern.dim_600x600.png, apply as subtle decoration to body or section backgrounds with low opacity and repeat tiling"
+        }
+      ]
+    }
+  ]
+}

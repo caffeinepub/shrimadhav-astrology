@@ -1,0 +1,15 @@
+{
+  "frontend/index.html": "HTML entry point with full SEO meta tags including title, description, keywords, Open Graph tags, and Google Fonts preconnect for Playfair Display and Inter.",
+  "frontend/src/index.css": "Global styles with OKLCH color system defining ivory/cream background, gold and saffron accent tokens, serif/sans font assignments, and utility classes for the spiritual design system.",
+  "frontend/tailwind.config.js": "Extended Tailwind config with custom font families (Playfair Display serif, Inter sans), gold/saffron/ivory color tokens, custom shadow utilities, and float/glow animations.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for backend mutations — useSubmitContact for contact form submissions and useSubscribeNewsletter for newsletter email storage.",
+  "frontend/src/App.tsx": "Root app component composing Header, Hero, About, Services, Courses, Contact, Footer, and WhatsAppButton sections in a single-page layout.",
+  "frontend/src/components/Header.tsx": "Fixed navigation header with site logo, desktop nav links, mobile hamburger menu, and a Book Consultation CTA linking to the Google Form.",
+  "frontend/src/components/Hero.tsx": "Full-viewport hero section with celestial background image, mandala overlay, headline, subheadline, Book Consultation (Google Form) and Explore Courses (scroll) buttons.",
+  "frontend/src/components/About.tsx": "About section introducing Astrologer Nishant Madhav with avatar, biography, four expertise area cards, and a mission statement quote.",
+  "frontend/src/components/Services.tsx": "Consultation services section with four gold-bordered service cards (Birth Chart, Career, Marriage, Dasha), each with a Book Now button linking to the Google Form.",
+  "frontend/src/components/Courses.tsx": "Premium courses section with four course cards showing MRP strikethrough, saffron-highlighted discounted prices, features list, and individual Enroll Now buttons linking to respective Google Forms.",
+  "frontend/src/components/Contact.tsx": "Contact section with phone/email display, WhatsApp card, newsletter signup with backend integration, and a contact form that submits to the backend canister.",
+  "frontend/src/components/WhatsAppButton.tsx": "Fixed bottom-right floating WhatsApp button linking to wa.me/918700810124 with hover tooltip.",
+  "frontend/src/components/Footer.tsx": "Site footer with brand info, quick navigation links, consultation CTA, copyright, and caffeine.ai attribution with UTM tracking."
+}

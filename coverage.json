@@ -1,0 +1,229 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-24T20:41:57.255Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 8,
+    "implemented": 8,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Apply a global visual theme across the entire site: light ivory/warm cream background (#FAF6EF or similar), gold accent color #D4AF37, saffron highlight color #FF9933, elegant serif font (e.g., Playfair Display or similar) for all headings, clean modern sans-serif font (e.g., Inter or Lato) for body text. Add subtle celestial/mandala SVG decorative patterns in the background. Ensure the layout is fully mobile responsive.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js"
+        ],
+        "matchedFiles": [
+          "frontend/src/index.css",
+          "frontend/tailwind.config.js"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Build a full-width Hero section at the top of the page with: site name 'SHRIMADHAV ASTROLOGY' and tagline 'By Astrologer Nishant Madhav' in the header/nav area; headline 'Awaken to the Wisdom Written in Your Stars'; subheadline 'Personalized Vedic astrology consultations and transformational courses to align your life with divine timing.'; a saffron CTA button labeled 'Book Consultation' that opens https://forms.gle/GSnWKXhVAdfjjjRx6 in a new tab; a gold-outlined secondary button labeled 'Explore Courses' that smooth-scrolls to the Courses section.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Hero.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Hero.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Build an About section introducing Astrologer Nishant Madhav. Include a brief biography paragraph, a list of expertise areas (Birth Chart Analysis, Nakshatra System, Dasha & Predictive Astrology, Career & Marriage Guidance), and a mission statement focused on clarity, dharma, and spiritual alignment. Use an avatar/icon placeholder for the astrologer's photo.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/About.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/About.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Build a Consultation Services section with exactly 4 gold-bordered service cards. Each card should display a service title, a brief description, and a 'Book Now' button that opens https://forms.gle/GSnWKXhVAdfjjjRx6 in a new tab. Suggested service titles: 'Birth Chart Reading', 'Career & Finance Consultation', 'Marriage & Relationship Guidance', 'Dasha & Predictive Analysis'. No internal booking system.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Services.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Services.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-5",
+        "summary": "Build a Courses section with 4 premium course cards. Each card must show: course title, MRP with strikethrough, discounted price highlighted in saffron (#FF9933), a short description, and an 'Enroll Now' button linking to its respective Google Form in a new tab. Course details: (1) NAKSHATRA MASTER COURSE – MRP ₹35,000, Price ₹28,000, Form: https://docs.google.com/forms/d/e/1FAIpQLSdYEPR3eRcOd1cXh68FXhff5ewMpoTml6fzNH8BJvHcC22VMw/viewform?usp=header; (2) ADVANCED PREDICTIVE ASTROLOGY – MRP ₹30,000, Price ₹21,000, Form: https://docs.google.com/forms/d/1XzTVhuKroKZVpuaY2f3PgUglh0AQXc65fYPqyWGE1qA/edit; (3) PREDICTIVE PRASHNA COURSE – MRP ₹14,500, Price ₹11,000, Form: https://docs.google.com/forms/d/1ZsZzuWn83u5qYHtPx7yvW5epRyt90ZXwJ_5rL4w-BLs/edit; (4) PANCHANG & REMEDIES COURSE – MRP ₹15,000, Price ₹11,000, Form: https://docs.google.com/forms/d/1td88CZwfBFd8-3hv2TwNwJDCc_gC5ewviJ2HKOMjbgI/edit. No internal checkout.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Courses.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Courses.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-6",
+        "summary": "Build a Contact section containing: display of phone number 8700810124 and email shrimadhavastrology@gmail.com; a contact form with fields for Name, Email, Phone, and Message (form submission should store the entry in backend state and show a success message); a newsletter signup input with email field and subscribe button (store emails in backend); and a floating WhatsApp button fixed to the bottom-right corner that opens https://wa.me/918700810124 in a new tab.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Contact.tsx",
+          "frontend/src/components/WhatsAppButton.tsx",
+          "frontend/src/App.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Contact.tsx",
+          "frontend/src/components/WhatsAppButton.tsx",
+          "frontend/src/App.tsx"
+        ]
+      },
+      {
+        "id": "REQ-7",
+        "summary": "Add proper SEO meta tags to the app: title 'SHRIMADHAV ASTROLOGY – Vedic Astrology Consultations & Courses by Nishant Madhav', meta description about personalized Vedic astrology consultations and courses, and relevant keywords. Include Open Graph tags for social sharing.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/index.html"
+        ],
+        "matchedFiles": [
+          "frontend/index.html"
+        ]
+      },
+      {
+        "id": "REQ-8",
+        "summary": "Generate a hero background image: a soft celestial scene with a warm ivory sky, faint mandala geometry overlay, glowing stars and subtle cosmic light in warm gold and cream tones. Also generate a decorative mandala pattern tile suitable for section backgrounds.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/Hero.tsx",
+          "frontend/src/index.css"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/Hero.tsx",
+          "frontend/src/index.css"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "build-request.json",
+    "build-template/Dockerfile",
+    "build-template/LICENSE",
+    "build-template/README.md",
+    "build-template/deploy.sh",
+    "build-template/icp.yaml",
+    "build-template/package.json",
+    "build-template/pnpm-lock.yaml",
+    "build-template/pnpm-workspace.yaml",
+    "build-template/scripts/prune-unused-images.js",
+    "build-template/scripts/resize-images.js",
+    "build-template/src/backend/canister.yaml",
+    "build-template/src/backend/system-idl/aaaaa-aa.did",
+    "build-template/src/frontend/canister.yaml",
+    "build-template/src/frontend/components.json",
+    "build-template/src/frontend/env.json",
+    "build-template/src/frontend/eslint-rules/no-bigint-in-query-keys.js",
+    "build-template/src/frontend/eslint-rules/require-internet-identity-provider.js",
+    "build-template/src/frontend/eslint.config.js",
+    "build-template/src/frontend/package.json",
+    "build-template/src/frontend/postcss.config.js",
+    "build-template/src/frontend/src/components/ui/accordion.tsx",
+    "build-template/src/frontend/src/components/ui/alert-dialog.tsx",
+    "build-template/src/frontend/src/components/ui/alert.tsx",
+    "build-template/src/frontend/src/components/ui/aspect-ratio.tsx",
+    "build-template/src/frontend/src/components/ui/avatar.tsx",
+    "build-template/src/frontend/src/components/ui/badge.tsx",
+    "build-template/src/frontend/src/components/ui/breadcrumb.tsx",
+    "build-template/src/frontend/src/components/ui/button.tsx",
+    "build-template/src/frontend/src/components/ui/calendar.tsx",
+    "build-template/src/frontend/src/components/ui/card.tsx",
+    "build-template/src/frontend/src/components/ui/carousel.tsx",
+    "build-template/src/frontend/src/components/ui/chart.tsx",
+    "build-template/src/frontend/src/components/ui/checkbox.tsx",
+    "build-template/src/frontend/src/components/ui/collapsible.tsx",
+    "build-template/src/frontend/src/components/ui/command.tsx",
+    "build-template/src/frontend/src/components/ui/context-menu.tsx",
+    "build-template/src/frontend/src/components/ui/dialog.tsx",
+    "build-template/src/frontend/src/components/ui/drawer.tsx",
+    "build-template/src/frontend/src/components/ui/dropdown-menu.tsx",
+    "build-template/src/frontend/src/components/ui/form.tsx",
+    "build-template/src/frontend/src/components/ui/hover-card.tsx",
+    "build-template/src/frontend/src/components/ui/input-otp.tsx",
+    "build-template/src/frontend/src/components/ui/input.tsx",
+    "build-template/src/frontend/src/components/ui/label.tsx",
+    "build-template/src/frontend/src/components/ui/menubar.tsx",
+    "build-template/src/frontend/src/components/ui/navigation-menu.tsx",
+    "build-template/src/frontend/src/components/ui/pagination.tsx",
+    "build-template/src/frontend/src/components/ui/popover.tsx",
+    "build-template/src/frontend/src/components/ui/progress.tsx",
+    "build-template/src/frontend/src/components/ui/radio-group.tsx",
+    "build-template/src/frontend/src/components/ui/resizable.tsx",
+    "build-template/src/frontend/src/components/ui/scroll-area.tsx",
+    "build-template/src/frontend/src/components/ui/select.tsx",
+    "build-template/src/frontend/src/components/ui/separator.tsx",
+    "build-template/src/frontend/src/components/ui/sheet.tsx",
+    "build-template/src/frontend/src/components/ui/sidebar.tsx",
+    "build-template/src/frontend/src/components/ui/skeleton.tsx",
+    "build-template/src/frontend/src/components/ui/slider.tsx",
+    "build-template/src/frontend/src/components/ui/sonner.tsx",
+    "build-template/src/frontend/src/components/ui/switch.tsx",
+    "build-template/src/frontend/src/components/ui/table.tsx",
+    "build-template/src/frontend/src/components/ui/tabs.tsx",
+    "build-template/src/frontend/src/components/ui/textarea.tsx",
+    "build-template/src/frontend/src/components/ui/toggle-group.tsx",
+    "build-template/src/frontend/src/components/ui/toggle.tsx",
+    "build-template/src/frontend/src/components/ui/tooltip.tsx",
+    "build-template/src/frontend/src/hooks/use-mobile.tsx",
+    "build-template/src/frontend/src/lib/utils.ts",
+    "build-template/src/frontend/tsconfig.json",
+    "build-template/src/frontend/vite.config.js",
+    "build-template/tsconfig.json",
+    "caffeine.lock.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/public/assets/generated/astrologer-avatar.dim_400x400.png",
+    "frontend/public/assets/generated/hero-bg.dim_1920x1080.png",
+    "frontend/public/assets/generated/mandala-pattern.dim_600x600.png",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/About.tsx",
+    "frontend/src/components/Contact.tsx",
+    "frontend/src/components/Courses.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/Header.tsx",
+    "frontend/src/components/Hero.tsx",
+    "frontend/src/components/Services.tsx",
+    "frontend/src/components/WhatsAppButton.tsx",
+    "frontend/src/config.ts",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/ui-summary.json",
+    "frontend/src/utils/StorageClient.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

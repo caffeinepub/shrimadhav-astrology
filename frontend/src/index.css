@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.5rem;
+
+        /* Ivory/cream background */
+        --background: 0.975 0.012 85;
+        --foreground: 0.18 0.025 60;
+
+        /* Card: slightly lighter cream */
+        --card: 0.985 0.008 80;
+        --card-foreground: 0.18 0.025 60;
+
+        --popover: 0.985 0.008 80;
+        --popover-foreground: 0.18 0.025 60;
+
+        /* Primary: deep warm brown/gold */
+        --primary: 0.42 0.09 65;
+        --primary-foreground: 0.975 0.012 85;
+
+        /* Secondary: soft warm cream */
+        --secondary: 0.94 0.018 80;
+        --secondary-foreground: 0.35 0.06 65;
+
+        --muted: 0.93 0.015 80;
+        --muted-foreground: 0.52 0.04 70;
+
+        --accent: 0.93 0.015 80;
+        --accent-foreground: 0.35 0.06 65;
+
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+
+        --border: 0.88 0.025 75;
+        --input: 0.88 0.025 75;
+        --ring: 0.72 0.08 70;
+
+        /* Gold accent */
+        --gold: 0.72 0.12 75;
+        --gold-light: 0.88 0.08 80;
+        --gold-dark: 0.55 0.10 68;
+
+        /* Saffron highlight */
+        --saffron: 0.72 0.18 55;
+        --saffron-dark: 0.60 0.18 50;
+
+        /* Ivory */
+        --ivory: 0.975 0.012 85;
+        --ivory-dark: 0.94 0.018 80;
+
+        --chart-1: 0.646 0.222 41.116;
+        --chart-2: 0.6 0.118 184.704;
+        --chart-3: 0.398 0.07 227.392;
+        --chart-4: 0.828 0.189 84.429;
+        --chart-5: 0.769 0.188 70.08;
+
+        --sidebar: 0.985 0 0;
+        --sidebar-foreground: 0.145 0 0;
+        --sidebar-primary: 0.205 0 0;
+        --sidebar-primary-foreground: 0.985 0 0;
+        --sidebar-accent: 0.97 0 0;
+        --sidebar-accent-foreground: 0.205 0 0;
+        --sidebar-border: 0.922 0 0;
+        --sidebar-ring: 0.708 0 0;
+    }
+
+    .dark {
+        --background: 0.145 0 0;
+        --foreground: 0.985 0 0;
+        --card: 0.205 0 0;
+        --card-foreground: 0.985 0 0;
+        --popover: 0.269 0 0;
+        --popover-foreground: 0.985 0 0;
+        --primary: 0.922 0 0;
+        --primary-foreground: 0.205 0 0;
+        --secondary: 0.269 0 0;
+        --secondary-foreground: 0.985 0 0;
+        --muted: 0.269 0 0;
+        --muted-foreground: 0.708 0 0;
+        --accent: 0.371 0 0;
+        --accent-foreground: 0.985 0 0;
+        --destructive: 0.704 0.191 22.216;
+        --destructive-foreground: 0.205 0 0;
+        --border: 1 0 0 / 10%;
+        --input: 1 0 0 / 15%;
+        --ring: 0.556 0 0;
+        --sidebar: 0.205 0 0;
+        --sidebar-foreground: 0.985 0 0;
+        --sidebar-primary: 0.488 0.243 264.376;
+        --sidebar-primary-foreground: 0.985 0 0;
+        --sidebar-accent: 0.269 0 0;
+        --sidebar-accent-foreground: 0.985 0 0;
+        --sidebar-border: 1 0 0 / 10%;
+        --sidebar-ring: 0.439 0 0;
+    }
+
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Inter', sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+    }
+}
+
+@layer utilities {
+    .font-serif {
+        font-family: 'Playfair Display', serif;
+    }
+    .font-sans {
+        font-family: 'Inter', sans-serif;
+    }
+    .text-gold {
+        color: oklch(var(--gold));
+    }
+    .text-saffron {
+        color: oklch(var(--saffron));
+    }
+    .bg-ivory {
+        background-color: oklch(var(--ivory));
+    }
+    .bg-ivory-dark {
+        background-color: oklch(var(--ivory-dark));
+    }
+    .border-gold {
+        border-color: oklch(var(--gold));
+    }
+    .border-gold-light {
+        border-color: oklch(var(--gold-light));
+    }
+    .bg-gold {
+        background-color: oklch(var(--gold));
+    }
+    .bg-saffron {
+        background-color: oklch(var(--saffron));
+    }
+    .hover\:bg-saffron-dark:hover {
+        background-color: oklch(var(--saffron-dark));
+    }
+    .hover\:bg-gold-dark:hover {
+        background-color: oklch(var(--gold-dark));
+    }
+    .shadow-gold {
+        box-shadow: 0 4px 24px 0 oklch(var(--gold) / 0.18);
+    }
+    .mandala-bg {
+        background-image: url('/assets/generated/mandala-pattern.dim_600x600.png');
+        background-repeat: repeat;
+        background-size: 300px 300px;
+        opacity: 0.04;
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Gold divider */
+.gold-divider {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, oklch(0.72 0.12 75), transparent);
+    margin: 0 auto;
+}
+
+/* Section heading style */
+.section-heading {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: oklch(0.28 0.06 65);
+    letter-spacing: -0.01em;
+}
+
+/* Gold card border */
+.gold-card {
+    border: 1.5px solid oklch(0.72 0.12 75 / 0.5);
+    background: oklch(0.985 0.008 80);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.gold-card:hover {
+    border-color: oklch(0.72 0.12 75);
+    box-shadow: 0 8px 32px oklch(0.72 0.12 75 / 0.15);
+}
